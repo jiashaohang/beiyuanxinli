@@ -1,0 +1,46 @@
+.devp_loading{
+  width: 88vw;
+  padding: 20vh 0;
+  margin: 20vh auto;
+  border-radius: 10rpx;
+  font-size: 50rpx;
+  color: white;
+  text-align: center;
+  background-color: #3889FF;
+
+}
+.i-cell{
+  padding: 7px 15px;
+  color: #495060;
+  display: flex;
+}
+.i-cell-right{
+  display: inline;
+  margin-left: 2.5em;
+}
+.checkbox{
+  display: flex;
+  padding: 7px 15px;
+  color: #495060;
+}
+.checkbox-left{
+  width: 70%;
+}
+.checkbox-right{
+  /* width: 80; */
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-left: 0.5em; */
+}
+.load{
+  width: 30vw;
+  height: 30vw;
+  position: relative;
+  top: 35vw;
+  left: 35vw;
+}
+.load_text{
+  position: absolute;
+  top: 66vw;
+  left: 35vw;
+}

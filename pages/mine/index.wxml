@@ -1,0 +1,90 @@
+<view class="userInfo">
+  <view class="bgimg"></view>
+	<view class="avatar">
+		<image wx:if="{{isScope}}" src="{{avatarUrl}}"></image>
+		<image wx:else src="/images/mine/pikaqiu.svg"></image>
+	</view>
+	<view class="userName">
+		<text wx:if="{{isScope}}" >{{userInfo.nickName}}</text>
+		<button wx:else open-type="getUserInfo"  bindgetuserinfo="bindGetUserInfo">登录</button>
+	</view>
+</view>
+<view class="order">
+	<view class="order-left">
+		<view style="font-size:1.5em;font-weight:600;text-align:center;">1</view>
+		<view>我的预约</view>
+	</view>
+	<view class="order-right">
+		<view style="font-size:1.5em;font-weight:600;text-align:center;">15</view>
+		<view>咨询记录</view>
+	</view>
+</view>
+<view class="entrence">
+
+	<i-row>
+		<i-col span="8" i-class="col-class" bindtap="entr">
+			<view class="icon">
+				<image style="width:100%;height:100%;" src="/images/mine/active.png"></image>
+			</view>
+			<view class="title">活动</view>
+		</i-col>
+		<i-col span="8" i-class="col-class" bindtap="entr">
+			<view class="icon">
+				<image style="width:100%;height:100%;" src="/images/mine/test.png"></image>
+			</view>
+			<view class="title">测评</view>
+		</i-col>
+		<i-col span="8" i-class="col-class" bindtap="entr">
+			<view class="icon">
+				<image style="width:100%;height:100%;" src="/images/mine/read.png"></image>
+			</view>
+			<view class="title">阅读 </view>
+		</i-col>
+	</i-row>
+	<i-row>
+      <view class="bgimg1"></view>
+		<i-col span="8" i-class="col-class" bindtap="entr">
+			<view class="icon">
+				<image style="width:100%;height:100%;" src="/images/mine/lesson.png"></image>
+			</view>
+			<view class="title">课程</view>
+		</i-col>
+		<i-col span="8" i-class="col-class" bindtap="entr">
+			<view class="icon">
+				<image style="width:100%;height:100%;" src="/images/mine/ask.png"></image>
+			</view>
+			<view class="title">问答</view>
+		</i-col>
+		<i-col span="8" i-class="col-class" bindtap="entr">
+			<view class="icon">
+				<image style="width:100%;height:100%;" src="/images/mine/service.png"></image>
+			</view>
+			<view class="title">客服</view>
+		</i-col>
+	</i-row>
+</view>
+<i-cell-group i-class="cell">
+    <i-cell title="我要评价" is-link url="/pages/businesscard/index">
+      <i-icon type="collection_fill" slot="icon"  size="28" color="#80848f" />
+    </i-cell>
+    <i-cell title="我的openid" bind:click="getOpenid" >
+      <i-icon type="dynamic_fill" slot="icon"  size="28" color="#80848f" />
+    </i-cell>
+    <i-cell title="绑定手机号" is-link url="/pages/businesscard/index">
+      <i-icon type="mobilephone_fill" slot="icon"  size="28" color="#80848f" />
+    </i-cell>
+    <i-cell title="绑定邮箱" is-link url="/pages/businesscard/index">
+      <i-icon type="document_fill" slot="icon"  size="28" color="#80848f" />
+    </i-cell>
+    <i-cell title="举报投诉" is-link url="/pages/businesscard/index">
+      <i-icon type="warning_fill" slot="icon"  size="28" color="#80848f" />
+    </i-cell>
+    <i-cell title="服务条款" is-link url="/pages/businesscard/index">
+      <i-icon type="createtask_fill" slot="icon"  size="28" color="#80848f" />
+    </i-cell>
+    <i-cell title="锁定">
+        <i-icon type="lock_fill" slot="icon"  size="28" color="#80848f" />
+        <switch slot="footer" checked />
+    </i-cell>
+</i-cell-group>
+

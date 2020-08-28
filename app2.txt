@@ -1,0 +1,89 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/consultation/index",
+    "pages/admin/index",
+    "pages/user/index",
+    "pages/test/test",
+    "pages/public/temp/navigationBar/navigationBar",
+    "pages/mine/index",
+    "pages/public/temp/tabBar/tabBar",
+    "pages/businesscard/index",
+    "pages/evaluation/index",
+    "pages/bindtel/index",
+    "pages/bindmail/index",
+    "pages/Tdetail/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "北院心理",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "color": "#8a8a8a",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "发现",
+        "iconPath": "/images/tabBar/find.png",
+        "selectedIconPath": "/images/tabBar/find_ed.png"
+      },
+      {
+        "pagePath": "pages/consultation/index",
+        "text": "咨询",
+        "iconPath": "/images/tabBar/consult.png",
+        "selectedIconPath": "/images/tabBar/consult_ed.png"
+      },
+      {
+        "pagePath": "pages/admin/index",
+        "text": "后台",
+        "iconPath": "/images/tabBar/admin.png",
+        "selectedIconPath": "/images/tabBar/admin_ed.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "/images/tabBar/mine.png",
+        "selectedIconPath": "/images/tabBar/mine_ed.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap78.json",
+  "usingComponents": {
+    "van-button": "miniprogram_npm/@vant/weapp/button/index",
+    "van-radio": "miniprogram_npm/@vant/weapp/radio/index",
+    "van-radio-group": "miniprogram_npm/@vant/weapp/radio-group/index",
+    "i-button": "components/iview/button/index",
+    "van-tabbar": "miniprogram_npm/@vant/weapp/tabbar/index",
+    "van-tabbar-item": "miniprogram_npm/@vant/weapp/tabbar-item/index",
+    "i-tab-bar": "components/iview/tab-bar/index",
+    "i-tab-bar-item": "components/iview/tab-bar-item/index",
+    "van-search": "miniprogram_npm/@vant/weapp/search/index",
+    "van-card": "miniprogram_npm/@vant/weapp/card/index",
+    "i-tabs": "components/iview/tabs/index",
+    "i-row": "components/iview/row/index",
+    "i-col": "components/iview/col/index",
+    "i-tab": "components/iview/tab/index",
+    "i-card": "components/iview/card/index",
+    "i-input": "components/iview/input/index",
+    "i-steps": "components/iview/steps/index",
+    "i-step": "components/iview/step/index",
+    "i-drawer": "components/iview/drawer/index",
+    "i-avatar": "components/iview/avatar/index",
+    "i-icon": "components/iview/icon/index",
+    "i-cell-group": "components/iview/cell-group/index",
+    "i-cell": "components/iview/cell/index",
+    "i-notice-bar": "components/iview/notice-bar/index",
+    "navBar": "/components/navBar/navBar",
+    "van-index-bar": "miniprogram_npm/@vant/weapp/index-bar/index",
+    "van-index-anchor": "miniprogram_npm/@vant/weapp/index-anchor/index",
+    "van-tab": "miniprogram_npm/@vant/weapp/tab/index",
+    "van-tabs": "miniprogram_npm/@vant/weapp/tabs/index",
+    "recycle-view": "miniprogram_npm/miniprogram-recycle-view/recycle-view",
+    "recycle-item": "miniprogram_npm/miniprogram-recycle-view/recycle-item"
+  }
+}

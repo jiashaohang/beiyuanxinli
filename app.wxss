@@ -1,0 +1,17 @@
+@import '/miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+.bg{
+  background-color: #2D8CF0;
+  width: 60vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10rpx;
+  margin: auto;
+  margin-top: 20vh;
+}
+page{
+  font-size: 14px;
+}

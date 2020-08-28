@@ -1,0 +1,6 @@
+<i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true">
+    <i-tab-bar-item key="find" icon="browse" current-icon="browse_fill" title="发现"></i-tab-bar-item>
+    <i-tab-bar-item key="consultation" icon="barrage" current-icon="barrage_fill" title="咨询"></i-tab-bar-item>
+    <i-tab-bar-item key="amdmin" icon="computer" current-icon="computer_fill"  title="后台"></i-tab-bar-item>
+    <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
+</i-tab-bar>

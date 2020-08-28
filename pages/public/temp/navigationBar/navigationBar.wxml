@@ -1,0 +1,4 @@
+<template name="navBar1">
+  <view style="background:red; width:100vw; height:{{statusBarHeight}}px;">asdasd</view>
+  <view style="background:blue; height:{{button}}px;"></view>
+</template>

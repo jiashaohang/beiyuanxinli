@@ -1,0 +1,19 @@
+<view class="timg">
+  <image style="width:100%;height:100%;" src="/images/swiper/img.jpg"></image>
+</view>
+
+<view class="top">
+  <view class="top-row1">贾东立</view>
+  <view class="top-row2">校内|校外|团体</view>
+  <view class="top-row3">
+    <view class="tsign-item">恋爱</view>
+    <view class="tsign-item">成长</view>
+    <view class="tsign-item">焦虑</view>
+  </view>
+  <view class="top-row4">国家二级咨询师|副教授</view>
+</view>
+
+<view class="desc">
+  <view class="desc-row1">咨询师简介</view>
+  <view class="desc-row1">擅长领域</view>
+</view>

@@ -1,0 +1,193 @@
+<view wx:if="{{is_tab1==1}}">
+	<view class="bg">
+		<view>北院心理项目组</view>
+		<view>功能正在完善</view>
+	</view>
+</view>
+<!-- 后台控制部 -->
+<block wx:if="{{is_tab1==2}}">
+
+<!-- 搜索框 -->
+<van-search value="{{ value }}" shape="round" background="#ffffff" placeholder="请输入搜索关键词" />
+
+<!-- 滚动导航标签页 -->
+<i-tabs current="{{ current_scroll }}" scroll bindchange="handleChangeScroll">
+	<i-tab key="tab1" title="推荐"></i-tab>
+	<i-tab key="tab2" title="阅读"></i-tab>
+	<i-tab key="tab3" title="活动"></i-tab>
+	<i-tab key="tab4" title="公告"></i-tab>
+	<i-tab key="tab5" title="测评"></i-tab>
+	<i-tab key="tab6" title="问卷"></i-tab>
+	<i-tab key="tab7" title="课程"></i-tab>
+	<i-tab key="tab8" title="问答"></i-tab>
+	<!-- <i-tab key="tab9" title="视频"></i-tab> -->
+</i-tabs>
+<block wx:if="{{tab=='tab1'}}">
+	<!-- 公告轮播 -->
+	<i-notice-bar icon="systemprompt" loop>
+    2020年7.19日，北院心理项目正式开启，敬请期待;
+  </i-notice-bar>
+	<!-- 咨询师动态 -->
+	<view class="card">
+		<view class="img"><image src="/images/bg/yiwen.png"></image></view>
+		<view class="card-head">
+			<view class="left">咨询师动态</view>
+			<view class="right">看看咨询师有哪些动态</view>
+		</view>
+		<view class="card-body">
+			<view class="item">
+				<view class="left"><image style="width:100%;height:100%;" src="/images/swiper/img.jpg"></image></view>
+				<view class="right">
+					<view class="name"> 张诗荟</view>
+					<view class="detail">
+						<view>回答了#个人成长#的问题</view>
+						<view class="time">5小时之前</view>
+					</view>
+				</view>
+			</view>
+			<view class="item">
+				<view class="left"><image style="width:100%;height:100%;" src="/images/swiper/img.jpg"></image></view>
+				<view class="right">
+					<view class="name"> 张诗荟</view>
+					<view class="detail">
+						<view>回答了#个人成长#的问题</view>
+						<view class="time">5小时之前</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<!-- 咨询师列表 -->
+	<view class="list">
+		<view class="list-head">咨询师</view>
+		<view class="list-select">
+			<view data-tab="0" class="{{tab2==0 ? 'blue' : 'white'}}" bindtap="tab">全部</view>
+			<view data-tab="1" class="{{tab2==1 ? 'blue' : 'white'}}" bindtap="tab">校内咨询</view>
+			<view data-tab="2" class="{{tab2==2 ? 'blue' : 'white'}}" bindtap="tab">校外咨询</view>
+			<view data-tab="3" class="{{tab2==3 ? 'blue' : 'white'}}" bindtap="tab">团体辅导</view>
+		</view>
+		<view class="list-body">
+		<block wx:if="{{tab2==0}}">
+			<!-- 老师列表循环开始 -->
+			<block wx:for="{{Tlist_all}}">
+				<view class="list-card" bindtap="tapListCard" data-tid="{{item.tid}}">
+					<view class="left"><image style="width:100%;height:100%;" src="/images/swiper/img.jpg"></image></view>
+					<view class="right">
+						<view style="font-size:38rpx;font-weight:600;">{{item.tname}}</view>
+						<view style="font-size:26rpx;font-weight:100;color:#6F758C;">{{item.tqualification}}</view>
+						<view style="font-size:26rpx;font-weight:100;color:#6F758C;">擅长:{{item.tspecialty}}</view>
+						<view class="sign">
+							<view class="sign-item"  wx:for="{{item.tsign}}">{{item.sign}}</view>
+						</view>
+					</view>
+				</view>
+			</block>
+				<!-- 老师列表循环结束 -->
+			</block>
+		<block wx:if="{{tab2==1}}">
+			<!-- 老师列表循环开始 -->
+			<block wx:for="{{Tlist_in}}">
+				<view class="list-card" bindtap="tapListCard" data-tid="{{item.tid}}">
+					<view class="left"><image style="width:100%;height:100%;" src="/images/swiper/img.jpg"></image></view>
+					<view class="right">
+						<view style="font-size:38rpx;font-weight:600;">王其倩</view>
+						<view style="font-size:26rpx;font-weight:100;color:#6F758C;">国家二级心理咨询师</view>
+						<view style="font-size:26rpx;font-weight:100;color:#6F758C;">擅长:婚姻家庭、少儿成长、人际关系</view>
+						<view class="sign">
+							<view class="sign-item">恋爱</view>
+							<view class="sign-item">恋爱</view>
+							<view class="sign-item">恋爱</view>
+							<view class="sign-item">恋爱</view>
+						</view>
+					</view>
+				</view>
+			</block>
+				<!-- 老师列表循环结束 -->
+			</block>
+			<block wx:if="{{tab2==2}}">
+				<block wx:for="{{Tlist_out}}">
+					<view class="list-card" bindtap="tapListCard" data-Tid="{{item.Tid}}">
+						<view class="left"><image style="width:100%;height:100%;" src="/images/swiper/img.jpg"></image></view>
+						<view class="right">
+							<view style="font-size:38rpx;font-weight:600;">王其倩</view>
+							<view style="font-size:26rpx;font-weight:100;color:#6F758C;">国家二级心理咨询师</view>
+							<view style="font-size:26rpx;font-weight:100;color:#6F758C;">擅长:婚姻家庭、少儿成长、人际关系</view>
+							<view class="sign">
+								<view class="sign-item">恋爱</view>
+								<view class="sign-item">恋爱</view>
+								<view class="sign-item">恋爱</view>
+								<view class="sign-item">恋爱</view>
+							</view>
+						</view>
+					</view>
+				</block>
+			</block>
+			<block wx:if="{{tab2==3}}">
+				<block wx:for="{{Tlist_team}}">
+					<view class="list-card" bindtap="tapListCard" data-Tid="{{item.Tid}}">
+						<view class="left"><image style="width:100%;height:100%;" src="/images/swiper/img.jpg"></image></view>
+						<view class="right">
+							<view style="font-size:38rpx;font-weight:600;">王其倩</view>
+							<view style="font-size:26rpx;font-weight:100;color:#6F758C;">国家二级心理咨询师</view>
+							<view style="font-size:26rpx;font-weight:100;color:#6F758C;">擅长:婚姻家庭、少儿成长、人际关系</view>
+							<view class="sign">
+								<view class="sign-item">恋爱</view>
+								<view class="sign-item">恋爱</view>
+								<view class="sign-item">恋爱</view>
+								<view class="sign-item">恋爱</view>
+							</view>
+						</view>
+					</view>
+				</block>
+			</block>
+		</view>
+	</view>
+
+  
+</block>
+<block wx:if="{{tab=='tab2'}}">
+	<i-card title="假如给我三天光明" extra="海伦•凯勒" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+		<view slot="content">励志经典</view>
+		<view slot="footer">会员免费</view>
+	</i-card>
+</block>
+<block wx:if="{{tab=='tab3'}}">
+	<i-card title="5.25活动" extra="心理健康部" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+		<view slot="content">励志经典</view>
+		<view slot="footer">会员免费</view>
+	</i-card>
+</block>
+<block wx:if="{{tab=='tab4'}}">
+	4
+</block>
+<block wx:if="{{tab=='tab5'}}">
+	<i-card title="假如给我三天光明" extra="海伦•凯勒" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+		<view slot="content">励志经典</view>
+		<view slot="footer">会员免费</view>
+	</i-card>
+</block>
+<block wx:if="{{tab=='tab6'}}">
+	<i-cell-group>
+		<i-cell title="只显示箭头" is-link></i-cell>
+		<i-cell title="跳转到首页" is-link url="/pages/dashboard/index"></i-cell>
+		<i-cell title="只有 footer 点击有效" is-link url="/pages/dashboard/index" only-tap-footer></i-cell>
+		<i-cell title="开关">
+			<switch slot="footer" checked />
+		</i-cell>
+	</i-cell-group>
+</block>
+<block wx:if="{{tab=='tab7'}}">
+	<button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">点击授权</button>
+</block>
+<block wx:if="{{tab=='tab8'}}">
+	8
+</block>
+<!-- <block wx:if="{{tab=='tab9'}}">
+
+</block> -->
+
+<!-- 轮播图 -->
+<!-- 底部tabBar -->
+ <!-- <include src="/pages/public/temp/tabBar/tabBar.wxml"/> -->
+</block>

@@ -1,0 +1,6 @@
+<view>
+  <view style="height:{{statusBarHeight}}px;"></view>
+  <view style=" height:{{menuButtonTop}}px;"></view>
+  <view style="height:{{menuButtonHeight}}px; text-align:center; ">北院心理</view>
+  <view style="height:{{menuButtonBottom}}px;"></view>
+</view>

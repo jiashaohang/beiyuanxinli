@@ -1,0 +1,13 @@
+<template name="msgItem">
+  <view>
+    <text> {{index}}: {{msg}} </text>
+    <text> Time: {{time}} </text>
+  </view>
+</template>
+
+<template is="msgItem" data="{{...item}}"/>
+<template is="msgItem" data="{{...item1}}"/>
+<button bindtap="api">接口测试</button>
+<tui-button type="primary"  :color="color" :size="size" :width="width" :height="height" bindclick="click"></tui-button>
+<import src="/pages/public/temp/navigationBar/navigationBar.wxml"/>
+<template is="item" />

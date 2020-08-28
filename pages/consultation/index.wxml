@@ -1,0 +1,187 @@
+<view wx:if="{{is_tab2==0}}">
+	<image src="/images/bg/loading.svg"class="load"></image>
+</view>
+
+<view wx:if="{{is_tab2==1}}">
+	<view class="bg">
+		<view>北院心理项目组</view>
+		<view>功能正在完善</view>
+	</view>
+</view>
+
+<block wx:if="{{is_tab2==2}}">
+<van-search value="{{ value }}" input-align="center" placeholder="请输入搜索关键词" />
+
+<van-tabs swipeable color="#1296db">
+	<van-tab title="校内预约">
+    <view style="margin-top:10rpx;"></view>
+		<i-steps current="{{current}}">
+			<i-step>
+				<view slot="title">
+					填写表单
+				</view>
+				<view slot="content">
+					详细的表单有助于，解决您的问题
+				</view>
+			</i-step>
+			<i-step>
+				<view slot="title">
+					消息授权
+				</view>
+				<view slot="content">
+					获取发送订阅消息的权限，一边向您发送预约信息
+				</view>
+			</i-step>
+			<i-step>
+				<view slot="title">
+					提交成功
+				</view>
+				<view slot="content">
+					系统将处理申请，请近期关注微信消息
+				</view>
+			</i-step>
+		</i-steps>
+		
+		<block wx:if="{{current==0}}">
+			<i-panel title="基本信息">
+				<i-input value="{{ value1 }}"  title="姓名"  placeholder="请填写真实姓名" />
+				<!-- 自定义风格单选cell -->
+				<view class="i-cell">
+					<text>关系</text> 
+					<view class="i-cell-right">
+						<radio-group>
+							<label class="radio">
+								<radio value="r1" checked="true"/>本人
+							</label>
+							<label class="radio">
+								<radio value="r2" />非本人
+							</label>
+						</radio-group>
+					</view>
+				</view>
+        <i-input wx:if="{{other_role}}" value="{{ value2 }}" title="具体关系"  placeholder="与求助者关系" />
+				<view class="i-cell">
+					<text>性别</text> 
+					<view class="i-cell-right">
+						<radio-group>
+							<label class="radio">
+								<radio value="r1" checked="true"/>男
+							</label>
+							<label class="radio">
+								<radio value="r2" />女
+							</label>
+						</radio-group>
+					</view>
+				</view>
+				<i-input value="{{ value3 }}" type="number" title="出生年月" placeholder="填写出生年月" />
+				<view class="i-cell">
+					<text>来自</text> 
+					<view class="i-cell-right">
+						<radio-group>
+							<label class="radio">
+								<radio value="r1" checked="true"/>农村
+							</label>
+							<label class="radio">
+								<radio value="r2" />城市
+							</label>
+							<label class="radio">
+								<radio value="r2" />城镇
+							</label>
+						</radio-group>
+					</view>
+				</view>
+				<i-input value="{{ value3 }}" type="number" title="联系电话" placeholder="请输入手机号" />
+				<i-input value="{{ value}}" type="textarea" title="归属信息" placeholder="如学院班级，具体到宿舍门牌号" maxlength="30" />
+				<i-input value="{{ value}}" type="textarea" title="宿舍号" placeholder="如“西校区1443”" maxlength="20" />
+        <i-input value="{{ value5 }}" title="辅导员"  placeholder="辅导员姓名" />
+				<i-input value="{{ value5 }}" title=""  placeholder="辅导员手机号" />
+				<i-input value="{{ value5 }}" title="紧急联系人"  placeholder="紧急联系人姓名" />
+				<i-input value="{{ value5 }}" title=""  placeholder="紧急联系人手机号" />
+			</i-panel>
+
+			<i-panel title="基本情况">
+        <i-input value="" title="你认为家庭关系的哪些方面影响到了现在困惑的你？" disabled />
+				<i-input value="{{ value}}" type="textarea" title="" placeholder="内容不超过60字" maxlength="60" />
+			</i-panel>
+
+			<view class="checkbox">
+					<view class="checkbox-left">来询问题</view> 
+						<checkbox-group class="checkbox-right">
+							<label class="checkbox">
+								<checkbox value="cb" checked="true"/>学习问题
+							</label>
+							<label class="checkbox">
+								<checkbox value="cb" />人际关系
+							</label>
+							<label class="checkbox">
+								<checkbox value="cb" />自我认知
+							</label>
+							<label class="checkbox">
+								<checkbox value="cb" />恋爱问题
+							</label>
+							<label class="checkbox">
+								<checkbox value="cb" />情绪困扰
+							</label>
+							<label class="checkbox">
+								<checkbox value="cb" />睡眠问题
+							</label>
+							<label class="checkbox">
+								<checkbox value="cb" />经济问题
+							</label>
+							<label class="checkbox">
+								<checkbox value="cb" />个人发展
+							</label>
+							<label class="checkbox">
+								<checkbox value="cb" />其他
+							</label>
+						</checkbox-group>
+				</view>
+
+			<i-panel title="咨询目的">
+        <i-input value="" title="你困惑或者难以摆脱的问题是什么？" disabled />
+				<i-input value="{{ value}}" type="textarea" title="" placeholder="内容不超过60字" maxlength="60" />
+			</i-panel>
+
+			<i-panel title="咨询历史">
+        <i-input value="" title="以前有没有过咨询，得到什么结果？" disabled />
+				<i-input value="{{ value}}" type="textarea" title="" placeholder="内容不超过60字" maxlength="60" />
+			</i-panel>
+			<!-- 自定义时间表 -->
+			<view class="time_table">
+				<view></view>
+			</view>
+			<i-panel title="有空时间">
+        <i-input value="" title="填写有空的时间" disabled />
+				<i-input value="{{ value}}" type="textarea" title="" placeholder="如“周一上午1-2节或具体时间段”" maxlength="60" />
+			</i-panel>
+
+			<i-button type="primary">提交</i-button>
+      <!-- <i-button bindclick="handleClick" type="primary">下一步</i-button> -->
+		</block>
+    <block wx:if="{{current==1}}">
+
+			<i-panel title="获取授权">
+        <i-input value="" title="系统将通过服务通知发送有关预约信息的订阅消息，为了方便取得即使获得消息，请勾选“总是保持以上选择”" disabled />
+			</i-panel>
+
+      <i-button bindclick="handleClick" type="primary">下一步</i-button>
+			<i-button bind:click="handleClickLast" type="primary" size="small">返回上一步</i-button>
+		</block>
+	</van-tab>
+	<van-tab title="校外预约">
+		<view class="devp_loading">
+			正在火速开发，敬请期待
+		</view>
+	</van-tab>
+	<van-tab title="团体辅导">
+		<view class="devp_loading">
+			正在火速开发，敬请期待
+		</view>
+	</van-tab>
+	<van-tab title="人工预约">
+		<view class="devp_loading">
+			正在火速开发，敬请期待
+		</view>
+	</van-tab>
+</van-tabs>
+</block>

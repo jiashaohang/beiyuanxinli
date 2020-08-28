@@ -1,0 +1,36 @@
+swiper{
+  background-color: red;
+}
+swiper swiper-item{
+  background-color: blue;
+}
+i-card{
+  margin: 1rpx;
+}
+.card{width: 92vw;margin: 30rpx auto;border-radius: 20rpx;position: relative;z-index: -99; padding: 20rpx 0; background-color: #EBF3FE;}
+.card .img{width: 200rpx;height: 200rpx;opacity: 0.2;position: absolute;z-index: -9;right: 0;}
+.card .img image{width: 100%;height: 100%;}
+.card .card-head{display: flex;}
+.card .card-head .left{font-size: 37rpx;font-weight: 700;margin:0 28rpx 0 20rpx;}
+.card .card-head .right{display: flex;flex-direction: column;justify-content: center;align-items: center; font-size: 25.5rpx;color: #BDC0CF;}
+.card .card-body{background-color: white;border-radius: 50rpx!important;width: 90%;margin: auto;}
+.card .card-body .item{background-color: white; display: flex;padding: 20rpx;}
+.card .card-body .item .left {width: 80rpx;height: 80rpx;border-radius: 50%;overflow: hidden;}
+.card .card-body .item .right{display: flex;flex-direction: column;padding-left: 1em; font-size: 22rpx;width: 80%;}
+.card .card-body .item .right .name{font-size: 28rpx;}
+.card .card-body .item .right .detail{color: #BDC0CF; display: flex;justify-content: space-between;}
+/* .card .card-body .item .right .name .time{float: right!important;display: inline;} */
+
+/* 咨询师列表 */
+.list{width: 96vw;padding: 2vw;margin-top: 40rpx;}
+.list .list-head{font-size: 40rpx; font-weight: 700;padding-left: 0.5em;}
+.list .list-select{display: flex;margin: 20rpx;}
+.list .list-select view{width: 6em;height: 2.4em;font-size: 22rpx;text-align: center;line-height: 2.4em;border-radius: 40rpx;font-weight: 100;margin: 0 0.7em;}
+.blue{background-color: #3F8BFB;color: white;border:1px solid #3F8BFB;}
+.white{background-color: #ffffff;color: black;border:1px solid #eee;}
+.list .list-body{margin-top: 40rpx;}
+.list .list-body .list-card{background-color: white;display: flex;padding: 15rpx;}
+.list .list-body .list-card .left{width: 200rpx;height: 200rpx;border-radius: 20rpx;overflow: hidden;}
+.list .list-body .list-card .right{padding-left: 18rpx;}
+.list .list-body .list-card .right .sign{display: flex;padding: 20rpx 0;}
+.list .list-body .list-card .right .sign .sign-item{background-color: #EBF3FE;width: 4em;height: 1.5em;text-align: center;line-height: 1.5em;border-radius: 30rpx;color: #3F8BFB;font-size: 24rpx;margin:0.1em;}

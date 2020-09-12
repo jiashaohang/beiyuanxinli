@@ -1,21 +1,45 @@
-// pages/Tdetail/index.js
+// pages/teachers/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tid: 0,
+    top_bg:[
+      {
+        img:'/assets/images/bg1.png'
+      },
+      {
+        img:'/assets/images/bg2.png'
+      },
+      {
+        img:'/assets/images/bg3.png'
+      }
+    ],
+    tec_list:[
+      {
+        avatar:'/assets/images/wxj.png',
+        name:'王学军',
+        detail:'学生处管理科'
+      },
+      {
+        avatar:'/assets/images/wxj.png',
+        name:'王学军',
+        detail:'学生处管理科'
+      },
+      {
+        avatar:'/assets/images/wxj.png',
+        name:'王学军',
+        detail:'学生处管理科'
+      }
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
-    this.setData({
-      tid:options.tid
-    })
+
   },
 
   /**

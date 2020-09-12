@@ -12,6 +12,18 @@ Page({
     current : 0,
     other_role:true
 },
+  webview_ask:function(e){
+    console.log(e.currentTarget.dataset.type)
+    wx.navigateTo({
+      url: '/pages/webview/webview?type=' + e.currentTarget.dataset.type,
+    })
+  },
+  webview_case:function(e){
+    console.log(e.currentTarget.dataset.type)
+    wx.navigateTo({
+      url: '/pages/webview/webview?type=' + e.currentTarget.dataset.type,
+    })
+  },
   handleClick:function () {
     const addCurrent = this.data.current + 1;
     const current = addCurrent > 2 ? 0 : addCurrent;
@@ -54,22 +66,6 @@ Page({
    */
   onLoad: function (options) {
     var that=this;
-    wx.cloud.callFunction({
-      // 需调用的云函数名
-      name: 'is_tab',
-      // 传给云函数的参数
-      data: {
-      },
-      // 成功回调
-      success:function(res){
-        that.setData({
-          is_tab2:res.result.is_tab.is_tab2
-        })
-        wx.hideLoading({
-          success: (res) => {},
-        })
-      }
-    })
   },
 
   /**

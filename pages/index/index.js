@@ -38,46 +38,10 @@ Page({
   onLoad: function (options) {
     var that=this;
     // 申请开放权限
-    wx.showLoading({
-      title: '正在加载页面',
-    })
-    wx.cloud.callFunction({
-      name: 'is_tab',
-      data: {
-      },
-      success:function(res){
-        that.setData({
-          is_tab1:res.result.is_tab.is_tab1
-        })
-        wx.hideLoading({
-          success: (res) => {},
-        })
-      }
-    })
     // 小程序端获取咨询师列表开始
     // 初始化小程序云开发数据库环境
-    const db = wx.cloud.database({
-      env: 'beiyuanxinli-yun-1'
-    })
     // 获取全部教师
-    db.collection('Tlist').get({
-      success:function(res){
-        // 成功拿到数据
-        console.log(res)
-        that.setData({
-          Tlist_all:res.data
-        })
-      }
-    })
     // 获取校内教师
-    db.collection('Tlist').where({
-      ttype:123
-    }).get({
-      success:function(res){
-        // 成功拿到数据
-        // console.log(res)
-      }
-    })
   },
 
   /**

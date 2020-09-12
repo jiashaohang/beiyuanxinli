@@ -18,11 +18,12 @@ i-card{
 .card .card-body .item .left {width: 80rpx;height: 80rpx;border-radius: 50%;overflow: hidden;}
 .card .card-body .item .right{display: flex;flex-direction: column;padding-left: 1em; font-size: 22rpx;width: 80%;}
 .card .card-body .item .right .name{font-size: 28rpx;}
+.badge{width: 1em; height: 1em;margin: 0.3em 0.1em;}
 .card .card-body .item .right .detail{color: #BDC0CF; display: flex;justify-content: space-between;}
 /* .card .card-body .item .right .name .time{float: right!important;display: inline;} */
 
 /* 咨询师列表 */
-.list{width: 96vw;padding: 2vw;margin-top: 40rpx;}
+.list{width: 96vw;padding: 2vw;}
 .list .list-head{font-size: 40rpx; font-weight: 700;padding-left: 0.5em;}
 .list .list-select{display: flex;margin: 20rpx;}
 .list .list-select view{width: 6em;height: 2.4em;font-size: 22rpx;text-align: center;line-height: 2.4em;border-radius: 40rpx;font-weight: 100;margin: 0 0.7em;}
@@ -30,7 +31,15 @@ i-card{
 .white{background-color: #ffffff;color: black;border:1px solid #eee;}
 .list .list-body{margin-top: 40rpx;}
 .list .list-body .list-card{background-color: white;display: flex;padding: 15rpx;}
-.list .list-body .list-card .left{width: 200rpx;height: 200rpx;border-radius: 20rpx;overflow: hidden;}
+.list .list-body .list-card .left{width: 300rpx;height: 200rpx;border-radius: 20rpx;overflow: hidden;}
 .list .list-body .list-card .right{padding-left: 18rpx;}
 .list .list-body .list-card .right .sign{display: flex;padding: 20rpx 0;}
 .list .list-body .list-card .right .sign .sign-item{background-color: #EBF3FE;width: 4em;height: 1.5em;text-align: center;line-height: 1.5em;border-radius: 30rpx;color: #3F8BFB;font-size: 24rpx;margin:0.1em;}
+.data{
+  line-height: 1.8em;
+  color: #909090;
+  margin: 0 0.2em;
+  float: right;
+  font-size:26rpx;
+  font-weight:100;
+}

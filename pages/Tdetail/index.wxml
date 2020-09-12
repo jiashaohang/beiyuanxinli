@@ -1,1 +1,12 @@
-{{tid}}
+<view class="container">
+
+  <swiper>
+    <swiper-item wx:for="{{top_bg}}"><image style="width:100%;height:100%;" src="{{item.img}}"></image></swiper-item>
+  </swiper>
+
+  <view class="title">
+    <view>师资展示</view>
+    <view class="title_bottom"></view>
+  </view>
+
+</view>

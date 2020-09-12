@@ -12,12 +12,14 @@
     "pages/evaluation/index",
     "pages/bindtel/index",
     "pages/bindmail/index",
-    "pages/Tdetail/index"
+    "pages/Tdetail/index",
+    "pages/case/index",
+    "pages/webview/webview"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "北院心理",
+    "navigationBarTitleText": "测试",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
@@ -28,27 +30,27 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "发现",
-        "iconPath": "/images/tabBar/find.png",
-        "selectedIconPath": "/images/tabBar/find_ed.png"
+        "text": "师资",
+        "iconPath": "/assets/images/tabBar/find.png",
+        "selectedIconPath": "/assets/images/tabBar/find_ed.png"
       },
       {
         "pagePath": "pages/consultation/index",
-        "text": "咨询",
-        "iconPath": "/images/tabBar/consult.png",
-        "selectedIconPath": "/images/tabBar/consult_ed.png"
+        "text": "案例",
+        "iconPath": "/assets/images/tabBar/consult.png",
+        "selectedIconPath": "/assets/images/tabBar/consult_ed.png"
       },
       {
         "pagePath": "pages/admin/index",
-        "text": "后台",
-        "iconPath": "/images/tabBar/admin.png",
-        "selectedIconPath": "/images/tabBar/admin_ed.png"
+        "text": "新闻",
+        "iconPath": "/assets/images/tabBar/admin.png",
+        "selectedIconPath": "/assets/images/tabBar/admin_ed.png"
       },
       {
         "pagePath": "pages/mine/index",
         "text": "我的",
-        "iconPath": "/images/tabBar/mine.png",
-        "selectedIconPath": "/images/tabBar/mine_ed.png"
+        "iconPath": "/assets/images/tabBar/mine.png",
+        "selectedIconPath": "/assets/images/tabBar/mine_ed.png"
       }
     ]
   },

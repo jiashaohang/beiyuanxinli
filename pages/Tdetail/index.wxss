@@ -1,1 +1,32 @@
-/* pages/Tdetail/index.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+
+swiper{
+  width: 100vw;
+  height: 30vh;
+  margin-bottom: 0.5em;
+}
+.title{
+  line-height: 1.9em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+.title_bottom{
+  width: 2em;
+  height: 0.3em;
+  margin: auto;
+  background-color: #3A82F8;
+  border-radius: 15rpx;
+}
+scroll-view{
+  /* display: flex; */
+  display: inline-block;
+  width: 100%;
+  height: 300rpx;
+}

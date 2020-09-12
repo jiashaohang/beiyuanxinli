@@ -32,7 +32,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.0",
-	"appid": "wxfca1532ca9fb1eb0",
+	"appid": "wx63d8a293ff76357b",
 	"projectname": "beiyuanxinli",
 	"cloudfunctionTemplateRoot": "",
 	"watchOptions": {
@@ -69,29 +69,15 @@
 			"current": -1,
 			"list": [
 				{
-					"id": -1,
-					"name": "pages/public/temp/navigationBar/navigationBar",
-					"pathName": "pages/public/temp/navigationBar/navigationBar",
+					"id": 0,
+					"name": "新闻展示",
+					"pathName": "pages/admin/index",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 1,
-					"name": "我的",
-					"pathName": "pages/mine/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "咨询师详情",
-					"pathName": "pages/businesscard/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "咨询",
+					"name": "案例展示",
 					"pathName": "pages/consultation/index",
 					"query": "",
 					"scene": null
